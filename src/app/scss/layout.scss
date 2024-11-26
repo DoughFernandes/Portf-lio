@@ -1,38 +1,27 @@
-@use '@scss/base/' as BASE;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-}
+@use "@scss/globals.module" as base;
 
 html,
 body {
-  min-width: BASE.$mobile-min-display;
-  background: var(--primary-bg-color);
-  background-repeat: no-repeat;
-  font-size: 1rem;
-  font-family: BASE.$font-body;
-  color: var(--text-color);
-  overflow-x: hidden;
-  position: relative; // Certifique-se de que o body tenha posição relativa
-
-  @include BASE.display-Container(100vh, 100vw, flex, column, flex-start, center);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--title-color);
-  font-family: BASE.$font-title;
-}
-
-img {
-  width: 100%;
   height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-primary);
+  color: var(--text);
+  transition: all 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

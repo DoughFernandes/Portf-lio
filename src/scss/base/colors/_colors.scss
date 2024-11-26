@@ -1,0 +1,49 @@
+// Definição de variáveis de cores gerais
+$primary-dark: #004c6d; // Azul petróleo profundo (mais vibrante)
+$primary-medium: #0087a8; // Azul petróleo médio mais vibrante
+$primary-light: #00a8d7; // Azul petróleo claro mais brilhante
+$secondary-gold: #f3a847; // Dourado vibrante (mais saturado)
+$neutral-dark: #232323; // Preto carvão ajustado
+$neutral-light: #f0f0f0; // Branco gelo mais suave
+$shadow-color: rgba(0, 0, 0, 0.15); // Sombra suave
+
+// Cores de status
+$success: #66bb6a; // Verde sucesso mais vibrante
+$error: #f44336; // Vermelho erro mais forte
+$warning: #ff9800; // Laranja aviso mais saturado
+$info: #2196f3; // Azul informação
+
+// Definição de temas
+@mixin theme-dark {
+  --background-primary: #{$neutral-dark};
+  --background-secondary: #{$primary-dark};
+  --background-card: #{$primary-medium};
+  --text: #{$neutral-light};
+  --title: #{$secondary-gold};
+  --border: #{$neutral-dark};
+  --button: #{$neutral-dark};
+  --link:  #{$info};
+  --icon: #{$secondary-gold};
+  --shadow: #{$shadow-color};
+  --success: #{$success};
+  --error: #{$error};
+  --warning: #{$warning};
+  --info: #{$info};
+}
+
+@mixin theme-light {
+  --background-primary: #{$neutral-light};
+  --background-secondary: #{$primary-medium};
+  --background-card: #{$primary-dark};
+  --text: #{$neutral-dark};
+  --title: #{$secondary-gold};
+  --border: #{$neutral-dark};
+  --button: #{$neutral-dark};
+  --link:  #{$info};
+  --icon: #{$neutral-light};
+  --shadow: #{$shadow-color};
+  --success: #{$success};
+  --error: #{$error};
+  --warning: #{$warning};
+  --info: #{$info};
+}

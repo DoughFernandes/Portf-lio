@@ -1,33 +1,26 @@
-'use client';
+"use client"
 
-import CursorDot from '@src/components/BolinhaBody';
-import Footer from '@src/components/Footer';
-import Loading from '@src/components/Loading';
-import { DisplaySize } from '@src/hooks/Display';
-import useProfile from '@src/hooks/useProfile';
-import { useEffect, useState } from 'react';
-import LobbyDesktop from './pages/lobby/desktop/page';
-import Lobby from './pages/lobby/mobile/page';
-import './scss/layout.scss';
+import ErrorSpan from "@/components/feedbacks/Errors";
+import Loading from "@/components/feedbacks/Loading";
+import Footer from "@/components/layout/Footer/footer";
+import Header from "@/components/layout/Header/Header";
+import { queryClient } from "@/services/queryClient";
+import { QueryClientProvider } from '@tanstack/react-query';
+import "./scss/page.scss";
 
 export default function Home() {
-  const { profile, error } = useProfile();
-  const [showLoading, setShowLoading] = useState(true);
-  const { isMobile } = DisplaySize();
+return (
+    <QueryClientProvider client={queryClient}>
+      <Header />
+      <main>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi minus et labore placeat veniam voluptatum expedita sequi fuga optio, nostrum iste quo dolorem! Magni provident iusto saepe temporibus odio maxime.
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoading(false);
-    }, 10000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <>
-      {showLoading ? <Loading /> : <CursorDot />}
-      {error && <p>{error}</p>}
-      {!showLoading && profile && (isMobile ? <Lobby /> : <LobbyDesktop />)}
+        <div>
+          <ErrorSpan message={" Lorem, ipsum dolor sit amet consectetur adipisicing elit."}/>
+          <Loading height="20" width="20" fontSize="1"/>
+        </div>
+      </main>
       <Footer />
-    </>
-  );
+    </QueryClientProvider>
+)
 }

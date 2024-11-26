@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,13 +20,12 @@
       }
     ],
     "paths": {
-      "@src/*": ["./src/*"],
-      "@public/*": ["./public/*"],
+      "@/*": ["./src/*"],
       "@scss/*": ["./src/scss/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@animation/*": ["./src/animation/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@services/*": ["./src/services/*"],
+      "@public/*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

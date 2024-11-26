@@ -1,0 +1,48 @@
+@use "@scss/base/index.scss";
+
+.header{
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background: var(--background-secondary);
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .header-figure-image{
+    display: flex;
+    gap: 1rem;
+    background: transparent;
+
+    img{
+      object-fit: contain;
+      object-position: center;
+      border-radius: 100%;
+      transition: all 0.1s ease-in-out;
+
+      &:hover{
+        scale: (1.1);
+      }
+    }
+
+    figcaption{
+      font-size: 1rem;
+      font-weight: 100;
+      letter-spacing: -1px;
+      color: var(--text);
+    }
+  }
+
+  .header-button{
+    background: transparent;
+    border: none;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+  }
+}
