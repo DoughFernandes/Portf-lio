@@ -1,24 +1,22 @@
-// PARA ALTERAR AS CORES DO PROJETO BASTA MUDAR AS CORES PRINCIPAIS, TODAS AS FONTES DE CORES USA ELAS COMO PADRÃO.
+// Tema Escuro - Azul Petróleo
+$dark-primary-bg-color: #012a36; // Azul petróleo escuro
+$dark-secondary-bg-color: #013947; // Azul petróleo médio
+$dark-card-bg-color: #025e73; // Azul petróleo claro
+$dark-border-color: #4c97a7; // Azul acinzentado
+$dark-title-color: #eaf7f9; // Quase branco
+$dark-text-color: #c8e6ea; // Azul acinzentado claro
+$dark-link-color: #80e1ff; // Azul celeste claro
+$dark-icon-color: #a9d8e6; // Azul suave
 
-// Tema Escuro PADRÃO
-$dark-primary-bg-color: #051328;
-$dark-secondary-bg-color: #041c3f;
-$dark-card-bg-color: #1e2b3a;
-$dark-border-color: #e5f4fd;
-$dark-title-color: #e5f4fd;
-$dark-text-color: #f0f0f0;
-$dark-link-color: #80bfff;
-$dark-icon-color: #e5f4fd;
-
-// Tema Claro PADRÃO
-$light-primary-bg-color: #e5f4fd;
-$light-secondary-bg-color: #c5e9fe;
-$light-card-bg-color: #e0f3ff;
-$light-border-color: #011d46;
-$light-title-color: #011826;
-$light-text-color: #011826;
-$light-link-color: #80bfff;
-$light-icon-color: #012840;
+// Tema Claro - Azul Petróleo
+$light-primary-bg-color: #d9f3f7; // Azul petróleo claro
+$light-secondary-bg-color: #b8e2eb; // Azul pastel
+$light-card-bg-color: #c7eef3; // Azul muito claro
+$light-border-color: #025e73; // Azul petróleo
+$light-title-color: #012a36; // Azul petróleo escuro
+$light-text-color: #013947; // Azul petróleo médio
+$light-link-color: #4c97a7; // Azul acinzentado
+$light-icon-color: #025e73; // Azul petróleo claro
 
 // Mixin para aplicar tema escuro
 @mixin dark-theme {
