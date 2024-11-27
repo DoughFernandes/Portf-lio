@@ -1,16 +1,15 @@
 import { ERROR_MESSAGES } from "@/hooks/err/ErrorHandling";
-import { Profile } from "@/interface/profile";
+import fetchData from "@services/routes/fetchData";
 import { useQuery } from "@tanstack/react-query";
-import fetchData from "../../services/routes/fetchData";
 
-const getProfile = async (): Promise<Profile> => {
+const getProfile = async <T>(): Promise<T> => {
   const data = await fetchData();
-  if(!data) throw new Error (ERROR_MESSAGES.FETCH_FAILED);
-  return data as Profile;
+  if (!data) throw new Error(ERROR_MESSAGES.FETCH_FAILED);
+  return data as T;
 };
 
-export function useProfile() {
-  const { data, isLoading, isError } = useQuery({
+export function useProfile<T>() {
+  const { data, isLoading, isError } = useQuery<T>({
     queryKey: ["profile"],
     queryFn: getProfile,
   });
