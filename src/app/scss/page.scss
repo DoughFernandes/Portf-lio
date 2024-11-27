@@ -1,6 +1,10 @@
 main {
-  height: calc(100vh - 6rem);
   width: 100%;
+  display: flex;
+  height: calc(100vh - 6rem);
   min-width: 340px;
-  max-width: 1400px;
+  max-width: 1440px;
+  gap: 1rem;
+  margin: 0 1rem;
 }
+

@@ -1,0 +1,14 @@
+.collapse {
+  margin: 3rem 0 3rem 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
