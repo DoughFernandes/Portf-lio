@@ -1,30 +1,46 @@
-'use client';
+import ListNavegation from "@/components/shared/RenderList/RenderList";
+import { About, Contact, Home } from "@components/shared/Collapse/Collapse";
+import React, { useState } from "react";
 
-import Collapse from "@/components/shared/Collapse";
-import { useState } from "react";
-import style from "./navegation.module.scss";
+interface IRender {
+  activeSection: string;
+  sections: {
+    home: React.ReactNode;
+    about: React.ReactNode;
+    contact: React.ReactNode;
+  };
+}
 
-export default function Example() {
-  const [isExpanded, setIsExpanded] = useState(false);
+const Collapse: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<keyof IRender["sections"]>("home");
 
-  const toggleCollapse = () => setIsExpanded(!isExpanded);
+  const sections: IRender["sections"] = {
+    home: <Home />,
+    about: <About />,
+    contact: <Contact />,
+  };
 
   return (
-    <div className={style.container}>
-      <button
-        className={style.toggleButton}
-        onClick={toggleCollapse}
-        aria-expanded={isExpanded}
-        aria-controls="collapse-content"
-      >
-        {isExpanded ? "Fechar" : "Abrir"}
-      </button>
+    <div>
+      <section>
+        <ListNavegation />
+      </section>
+      <ul>
+        <li>
+          <button onClick={() => setActiveSection("home")}>Home</button>
+        </li>
+        <li>
+          <button onClick={() => setActiveSection("about")}>About</button>
+        </li>
+        <li>
+          <button onClick={() => setActiveSection("contact")}>Contact</button>
+        </li>
+      </ul>
 
-      <Collapse isExpanded={isExpanded}>
-        <div id="collapse-content" className={style.content}>
-          <p>Este é o conteúdo dentro do colapso.</p>
-        </div>
-      </Collapse>
+      <div>{sections[activeSection]}</div>
     </div>
   );
-}
+};
+
+export default Collapse;
+
