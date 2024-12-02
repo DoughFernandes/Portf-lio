@@ -1,5 +1,5 @@
-import ListNavegation from "@/components/shared/RenderList/RenderList";
-import { About, Contact, Home } from "@components/shared/Collapse/Collapse";
+import { About, Contact, Home } from "@/components/layout/Nav/shared/Collapse/Collapse";
+import ListNavegation from "@/components/layout/Nav/shared/RenderList/RenderList";
 import React, { useState } from "react";
 
 interface IRender {

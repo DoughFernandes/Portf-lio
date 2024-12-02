@@ -6,7 +6,7 @@ type ErrorSpanProps = {
   message: string;
 };
 
-const ErrorSpan: React.FC<ErrorSpanProps> = ({ message }) => {
+const Error: React.FC<ErrorSpanProps> = ({ message }) => {
   return(
     <div aria-label="Aviso de erro" className={style["container-error"]}>
       <span className={style["error-icone"]}>
@@ -19,4 +19,4 @@ const ErrorSpan: React.FC<ErrorSpanProps> = ({ message }) => {
   );
 };
 
-export default ErrorSpan;
+export default Error;
