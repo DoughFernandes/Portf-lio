@@ -11,7 +11,7 @@ interface IRender {
   };
 }
 
-const Collapse: React.FC = () => {
+export default function Navegation () {
   const [activeSection, setActiveSection] = useState<keyof IRender["sections"]>("home");
 
   const sections: IRender["sections"] = {
@@ -40,7 +40,4 @@ const Collapse: React.FC = () => {
       <div>{sections[activeSection]}</div>
     </div>
   );
-};
-
-export default Collapse;
-
+}
